@@ -152,6 +152,11 @@ header.scrolled {
  	 filter: drop-shadow(0px 0px 50px rgba(0,0,0,0.5));
 }
 
+.shadowed2 {
+	 -webkit-filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.5));
+ 	 filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.5));
+}
+
 @keyframes scroll {
 	0% {
     opacity: 1;
@@ -180,4 +185,42 @@ header.scrolled {
   header video {
     display: none;
   }
+}
+
+.tk-circle {
+	position: relative;
+	background-color: #fff;
+	border-radius: 150px;
+	width: 250px;
+	height: 250px;
+}
+
+.content-title {
+	font-size: 3rem;
+	color: #000;
+	font-weight: 700;
+}
+
+.content-sub-title {
+	font-size: 1.25rem;
+	color: #000;
+	font-weight: 700;
+}
+
+.content-text {
+	font-size: 1rem;
+	color: #000;
+	font-weight: 400;
+}
+
+.vr-bg {
+	background-image: url("../images/vr-bg.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.ar-bg {
+	background-image: url("../images/ar-bg.png");
+	background-repeat: no-repeat;
+	background-position: left top;
 }

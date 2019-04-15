@@ -2984,6 +2984,18 @@ fieldset:disabled a.btn {
   border-color: #000;
 }
 
+.btn-purple {
+  color: #fff;
+  background-color: #562c97;
+  border-color: #562c97;
+}
+
+.btn-purple:hover {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+}
+
 .btn-green-hover:hover {
 	background: #c1d82f;
 	color: #000;
