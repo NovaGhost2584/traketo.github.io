@@ -4455,11 +4455,11 @@ input[type="button"].btn-block {
 	
 	.navbar-brand img {
 		margin: 1rem 10rem;
+  		transition:500ms ease;
 	}
 	
 	.navbar-brand img.scrolled {
 		width: 30%;
-  		transition:500ms ease;
 	}
 }
 

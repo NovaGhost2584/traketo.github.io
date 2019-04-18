@@ -1,6 +1,6 @@
 // JavaScript Document
 $(window).scroll(function(){
-	$(".navscroll").toggleClass('scrolled', $(this).scrollTop() > 80);
+	$(".navscroll").toggleClass('scrolled', $(this).scrollTop() > 100);
 });
 
 function deferVideo() {
