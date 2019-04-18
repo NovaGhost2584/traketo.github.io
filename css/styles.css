@@ -4,9 +4,6 @@
 
 /*body{min-height:800vh;}*/
 
-header,
-.navbar,
-.logo-header,
 .border-bottom,
 .darkgreen,
 .btn-black{
@@ -169,4 +166,34 @@ header,
   color: #000;
   background-color: #c1d82f;
   border-color: #c1d82f;
+}
+
+.greenshapes {
+	z-index: 11;
+	position: relative;
+	top: -25vw;
+}
+
+@media (min-width: 576px) {
+
+	.greenshapes {
+		top: -30vw;
+	}
+	
+}
+
+@media (min-width: 768px) {
+
+	.greenshapes {
+		top: -30vw;
+	}
+	
+}
+
+@media (min-width: 1200px) {
+
+	.greenshapes {
+		top: -14vw;
+	}
+	
 }

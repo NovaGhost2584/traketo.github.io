@@ -60,6 +60,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
+	overflow-x: hidden;
 }
 
 [tabindex="-1"]:focus {
@@ -4170,7 +4171,9 @@ input[type="button"].btn-block {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   top: 0%;
-	z-index: 999;
+  z-index: 999;
+  background-color: #111;
+  transition:500ms ease;
 }
 
 .navbar > .container,
@@ -4189,10 +4192,11 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
+  margin-right: 0rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  transition:500ms ease;
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -4258,9 +4262,9 @@ input[type="button"].btn-block {
   background-size: 100% 100%;
 }
 	
-	.navbar-brand img {
-		width: 50%;
-	}
+.navbar-brand img {
+	width: 50%;
+}
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
@@ -4392,6 +4396,19 @@ input[type="button"].btn-block {
 	.navbar-brand img {
 		margin: 1rem 5rem;
 	}
+	
+	.navbar {
+		background-color: transparent;
+	}
+	
+	.navbar.scrolled {
+		background-color: #111 !important;
+  		transition:500ms ease;
+	}
+	
+	.navbar-brand img.scrolled {
+  		transition:500ms ease;
+	}
 }
 
 @media (max-width: 1199.98px) {
@@ -4438,6 +4455,11 @@ input[type="button"].btn-block {
 	
 	.navbar-brand img {
 		margin: 1rem 10rem;
+	}
+	
+	.navbar-brand img.scrolled {
+		width: 30%;
+  		transition:500ms ease;
 	}
 }
 
