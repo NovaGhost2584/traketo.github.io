@@ -3,11 +3,26 @@ $(window).scroll(function(){
 	$(".navscroll").toggleClass('scrolled', $(this).scrollTop() > 850);
 });
 
+function deferVideo() {
 
-var images = document.querySelectorAll('.thumbnail');
-new simpleParallax(images, {
-	delay: 0, 
-	orientation: 'down', 
-	scale: 1.5, 
-	overfow: true
-}); 
+    //defer html5 video loading
+  $("video source").each(function() {
+    var sourceFile = $(this).attr("data-src");
+    $(this).attr("src", sourceFile);
+    var video = this.parentElement;
+    video.load();
+    // uncomment if video is not autoplay
+    //video.play();
+  });
+
+}
+window.onload = deferVideo;
+
+
+//var images = document.querySelectorAll('.thumbnail');
+//new simpleParallax(images, {
+	//delay: 0, 
+	//orientation: 'down', 
+	//scale: 1.5, 
+	//overfow: true
+//}); 

@@ -4,105 +4,14 @@
 
 /*body{min-height:800vh;}*/
 
-#hero {
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-}
-
-.layer {
-  background-position: bottom center;
-  background-size: auto;
-  background-repeat: no-repeat;
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-}
-
-#hero, .layer {
-  min-height: 800px;
-}
-
-.layer-01 {
-	min-height: 800px;
-}
-
 header,
 .navbar,
 .logo-header,
 .border-bottom,
-.darkgreen {
+.darkgreen,
+.btn-black{
   transition:500ms ease;
   background:transparent;
-}
-
-.navbar.scrolled{
-  background: #111;
-  padding: 0.1rem 10rem;
-	box-shadow: 0px 0px 10px #000;
-}
-
-.darkgreen.scrolled {
-    position: relative;
-    top: -100px;
-}
-
-.logo-header {
-	width: 100%;
-	vertical-align: middle;
-    border-style: none;
-}
-
-.logo-header.scrolled {
-	width: 75%;	
-}
-
-.border-bottom.scrolled {
-  border-bottom: 0px solid #dee2e6 !important;
-}
-
-header {
-  position: relative;
-  background-color: black;
-  height: 100vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
-}
-
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.75;
-  z-index: 1;
-}
-
-header.scrolled {
-	display: none;
 }
 
 .text-pulse {
@@ -113,9 +22,16 @@ header.scrolled {
 	background-color: #c1d82f;	
 }
 
+.icon-scroll {
+	display: none;
+}
+
+
+@media (min-width: 992px){
 .icon-scroll,
 .icon-scroll:before {
   position: absolute;
+	display: block;
   left: 50%;
 }
 
@@ -141,6 +57,7 @@ header.scrolled {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-name: scroll;
+}
 }
 
 .simpleParallax {
@@ -172,17 +89,11 @@ header.scrolled {
     background: transparent;
 }
 
-.sticky {
-	position: fixed !important;
-	top: 0;
-	width: 100%;
-}
-
 @media (pointer: coarse) and (hover: none) {
-  header {
+.jumbrotron {
     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
   }
-  header video {
+.jumbotron video {
     display: none;
   }
 }
@@ -223,4 +134,39 @@ header.scrolled {
 	background-image: url("../images/ar-bg.png");
 	background-repeat: no-repeat;
 	background-position: left top;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: 3;
+}
+
+.title-text {
+	margin: 40% 10%;
+}
+
+@media screen and (min-width: 992px){
+	.title-text {
+		margin: 30% 5%;
+	}
+}
+
+.btn-black {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+	border-radius: 10px;
+  padding: 3% 5%;
+}
+
+.btn-black:hover {
+  color: #000;
+  background-color: #c1d82f;
+  border-color: #c1d82f;
 }

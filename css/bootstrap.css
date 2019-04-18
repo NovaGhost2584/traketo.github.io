@@ -31,7 +31,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Open Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -42,7 +42,7 @@
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -54,13 +54,12 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
 }
 
 [tabindex="-1"]:focus {
@@ -156,6 +155,7 @@ a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
+  font-family: 'Open Sans', sans-serif; 
 }
 
 a:hover {
@@ -396,12 +396,24 @@ h6, .h6 {
 }
 
 .display-1 {
-  font-size: 6.5rem;
+  font-size: 13vw;
   font-weight: 300;
   line-height: 1.2;
 }
 
+@media screen and (min-width: 768px){
+	.display-1 {
+		font-size: 5rem;
+	}
+	
+}
 
+@media screen and (min-width: 1200px){
+	.display-1 {
+		font-size: 6rem;
+	}
+	
+}
 
 .display-2 {
   font-size: 5.5rem;
@@ -424,11 +436,8 @@ h6, .h6 {
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin: 0rem 10rem;
   border: 0;
-  border-top: 1px solid rgb(255, 255, 255);
-  position: relative;
-  z-index: 9;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 small,
@@ -2974,34 +2983,10 @@ fieldset:disabled a.btn {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 2rem 4rem;
+  padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
-}
-
-.btn-black {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-}
-
-.btn-purple {
-  color: #fff;
-  background-color: #562c97;
-  border-color: #562c97;
-}
-
-.btn-purple:hover {
-  color: #000;
-  background-color: #fff;
-  border-color: #fff;
-}
-
-.btn-green-hover:hover {
-	background: #c1d82f;
-	color: #000;
-	border-color: #c1d82f;
 }
 
 .btn-sm, .btn-group-sm > .btn {
@@ -4087,25 +4072,15 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  z-index: 9;
 }
 
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  transition:500ms ease;
-}
-
-.nav-item a {
-	color: #fff;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.5rem;
-	
 }
 
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
-  color: #c1d82f;
 }
 
 .nav-link.disabled {
@@ -4193,8 +4168,9 @@ input[type="button"].btn-block {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1rem 10rem;
-  z-index: 9999;
+  padding: 0.5rem 1rem;
+  top: 0%;
+	z-index: 999;
 }
 
 .navbar > .container,
@@ -4236,6 +4212,7 @@ input[type="button"].btn-block {
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
+  font-size: 1em;
 }
 
 .navbar-nav .dropdown-menu {
@@ -4276,10 +4253,14 @@ input[type="button"].btn-block {
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  content: "";
+  content: url("../images/hamburger.png");
   background: no-repeat center center;
   background-size: 100% 100%;
 }
+	
+	.navbar-brand img {
+		width: 50%;
+	}
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
@@ -4388,8 +4369,10 @@ input[type="button"].btn-block {
     position: absolute;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 2rem;
-    padding-left: 3rem;
+    padding: 0rem 2rem;
+	  color: #fff;
+	  font-family: 'Open Sans', sans-serif;
+	  font-size: 1.25vw;
   }
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
@@ -4405,6 +4388,10 @@ input[type="button"].btn-block {
   .navbar-expand-lg .navbar-toggler {
     display: none;
   }
+	
+	.navbar-brand img {
+		margin: 1rem 5rem;
+	}
 }
 
 @media (max-width: 1199.98px) {
@@ -4432,6 +4419,7 @@ input[type="button"].btn-block {
   .navbar-expand-xl .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+	  font-size: 1.5em;
   }
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid {
@@ -4447,6 +4435,10 @@ input[type="button"].btn-block {
   .navbar-expand-xl .navbar-toggler {
     display: none;
   }
+	
+	.navbar-brand img {
+		margin: 1rem 10rem;
+	}
 }
 
 .navbar-expand {
@@ -4550,11 +4542,12 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
+  color: #c1d82f;
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -4570,7 +4563,7 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-toggler {
   color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.1);
+  /*border-color: rgba(255, 255, 255, 0.1);*/
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -5124,17 +5117,27 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .jumbotron {
-  padding: 2rem 1rem;
+  /*padding: 2rem 1rem;
   margin-bottom: 2rem;
   background-color: #e9ecef;
   border-radius: 0.3rem;
+*/}
+
+.jumbotron video {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width:100%;
+  height:100%;
+  /*  object-fit is not supported on IE  */
+  object-fit: cover;
 }
 
-@media (min-width: 576px) {
+/*@media (min-width: 576px) {
   .jumbotron {
     padding: 4rem 2rem;
   }
-}
+}*/
 
 .jumbotron-fluid {
   padding-right: 0;
@@ -6925,6 +6928,10 @@ button.bg-dark:focus {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important;
   }
+	
+  .bg-dark {
+	background-color: transparent !important;
+  }
 }
 
 @media print {
@@ -7928,6 +7935,10 @@ button.bg-dark:focus {
 
 .min-vw-100 {
   min-width: 100vw !important;
+}
+
+.min-vw-20 {
+  min-width: 20vw !important;
 }
 
 .min-vh-100 {
