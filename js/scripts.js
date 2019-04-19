@@ -19,9 +19,11 @@ function deferVideo() {
 window.onload = deferVideo;
 
 
-var images = document.querySelectorAll('.thumbnail');
+var images = document.querySelectorAll('.parallax-green');
 new simpleParallax(images, {
 	delay: 0, 
 	orientation: 'down', 
 	scale: 1.5
 }); 
+
+$('.parallax-window').parallax({imageSrc: 'images/Parallax-Purple.jpg'});
