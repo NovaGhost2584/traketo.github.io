@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-grid.css" rel="stylesheet">
 	<link href="css/aos.css" rel="stylesheet">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -18,9 +19,9 @@
 	</head>
 
 	<body>
+		<div class="overflow-fix">
 		
-		
-		<div class="jumbotron jumbotron-fluid">
+		<div class="jumbotron jumbotron-fluid vh-75">
 			<div class="overlay"></div>
 			<video playinline autoplay muted loop poster="">    
 				<source src="https://s3.us-east-2.amazonaws.com/aws-codestar-us-east-2-774818991484/PulseHeroVid.mp4" data-src="https://s3.us-east-2.amazonaws.com/aws-codestar-us-east-2-774818991484/PulseHeroVid.mp4" type="video/mp4">
@@ -41,7 +42,7 @@
 		<div class="icon-scroll"></div>
 		</div>
 		
-		<nav class="navbar navbar-expand-lg navbar-dark border-bottom shadowed2 position-fixed w-100 navscroll">
+		<nav class="navbar navbar-expand-lg navbar-dark border-bottom shadowed2 fixed-top w-100 navscroll">
 			<a class="navbar-brand" href="#"><img class="navscroll" src="images/Logo-Header_white.png" alt="Pulse Labs Logo" /></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -75,10 +76,23 @@
 				<img class="darkgreen thumbnail shadowed" src="images/darkgreen.png" alt="darkgreenshape" />
 				<img class="position-relative lightgreen shadowed" src="images/lightgreen.png" alt="lightkgreenshape" style="margin-top: -500px" />
 			</div>
+		</div>
 			
-			<div class="row background-pulse greenshapes" style="height:500px">
-			dsgfsdfzgsdfgsdfz
-			</div>
+		<div class="container-fluid m-auto">
+			<div class="row background-pulse greenshapes justify-content-center">
+				<div class="col-sm-2 pb-5" style="min-width: 300px">
+					<div class="tk-circle shadowed2" data-aos="fade-right">
+						<img src="images/vivepro-hs.png" alt="VR Headset" class="shadowed2" style="width: 125%; margin-left:-25px;" />
+					</div>
+				</div>
+				<div class="col-sm-6 pb-5 vr-bg" data-aos="fade-left" data-aos-delay>
+					<p class="content-title">Virtual Reality</p>
+					<p class="content-sub-title">Virtual Reality is super cool and you should try it then you should call us</p>
+					<p class="content-text">The definition of virtual reality comes, naturally, from the definitions for both ‘virtual’ and ‘reality’. The definition of ‘virtual’ is near and reality is what we experience as human beings. So the term ‘virtual reality’ basically means ‘near-reality’. This could, of course, mean anything but it usually refers to a specific type of reality emulation.</p>
+					<p class="content-text">
+					We know the world through our senses and perception systems. In school we all learned that we have five senses: taste, touch, smell, sight and hearing. These are however only our most obvious sense organs. The truth is that humans have many more senses than this, such as a sense of balance for example. These other sensory inputs, plus some special processing of sensory information by our brains ensures that we have a rich flow of information from the environment to our minds.</p>
+				</div>
+			</div>	
 		</div>
 		
 		
@@ -91,5 +105,6 @@
 		  AOS.init();
 		</script>
 		
+		</div>	
 	</body>
 </html>
