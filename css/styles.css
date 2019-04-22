@@ -201,10 +201,18 @@
 	top: -25vw;
 }
 
+.greenshapes-reset {
+	margin-bottom: -25vw;
+}
+
 @media (min-width: 576px) {
 
 	.greenshapes {
 		top: -30vw;
+	}
+
+	.greenshapes-reset {
+		margin-bottom: -30vw;
 	}
 	
 }
@@ -214,6 +222,10 @@
 	.greenshapes {
 		top: -30vw;
 	}
+
+	.greenshapes-reset {
+		margin-bottom: -30vw;
+	}
 	
 }
 
@@ -221,6 +233,10 @@
 
 	.greenshapes {
 		top: -14vw;
+	}
+
+	.greenshapes-reset {
+		margin-bottom: -14vw;
 	}
 	
 }
