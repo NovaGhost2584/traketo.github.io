@@ -1,29 +1,48 @@
-// JavaScript Document
+// on scroll effects
 $(window).scroll(function(){
 	$(".navscroll").toggleClass('scrolled', $(this).scrollTop() > 100);
 });
 
-function deferVideo() {
 
-    //defer html5 video loading
+// background video player
+function deferVideo() {   
   $("video source").each(function() {
     var sourceFile = $(this).attr("data-src");
     $(this).attr("src", sourceFile);
     var video = this.parentElement;
-    video.load();
-    // uncomment if video is not autoplay
-    //video.play();
+    video.load();video.play();
   });
-
 }
 window.onload = deferVideo;
 
 
-var images = document.querySelectorAll('.parallax-green');
-new simpleParallax(images, {
-	delay: 0, 
-	orientation: 'down', 
-	scale: 1.5
-}); 
+// media queries
+if (matchMedia) {
+	const mq = window.matchMedia("(max-width: 575px)");
+	mq.addListener(WidthChange);
+	WidthChange(mq);
+} else {
+	// do nothing
+}
 
+
+// media query change
+function WidthChange(mq) {
+	if (mq.matches) {	
+		var images = document.querySelectorAll('.parallax-green');
+		new simpleParallax(images, {
+		scale: 1
+		}); 
+	} else {			
+		var images = document.querySelectorAll('.parallax-green');
+		new simpleParallax(images, {
+		scale: 1.5,
+		delay: 0, 
+		orientation: 'down'
+		}); 
+	}
+}
+
+
+// standard parallax
 $('.parallax-window').parallax({imageSrc: 'images/Parallax-Purple.jpg'});
