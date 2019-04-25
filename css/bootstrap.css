@@ -433,11 +433,23 @@ h6, .h6 {
   line-height: 1.2;
 }
 
+.display-5 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-6 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #c1d82f;
 }
 
 small,
@@ -2434,15 +2446,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  color: #000;
+  background-color: #c1d82f;
+  border-color: #c1d82f;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #000;
+  border-color: #000;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -6311,28 +6323,6 @@ a.close.disabled {
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex;
-}
-
-.carousel-inner .carousel-item-right.active,
-.carousel-inner .carousel-item-next {
-  transform: translateX(25%);
-}
-
-.carousel-inner .carousel-item-left.active, 
-.carousel-inner .carousel-item-prev {
-  transform: translateX(-25%);
-}
-  
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left{ 
-  transform: translateX(0);
-  
-}
-
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
     transition: none;
@@ -6404,6 +6394,9 @@ a.close.disabled {
   transition: opacity 0.15s ease;
 }
 
+
+
+
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,
   .carousel-control-next {
@@ -6421,27 +6414,27 @@ a.close.disabled {
 }
 
 .carousel-control-prev {
-  left: 0;
+  left: -5%;
 }
 
 .carousel-control-next {
-  right: 0;
+  right: -5%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: 20px;
+  width: 15px;
   height: 20px;
   background: no-repeat 50% / 100% 100%;
 }
 
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+  background-image: url("../images/back.png");
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+  background-image: url("../images/next.png");
 }
 
 .carousel-indicators {
@@ -6667,9 +6660,19 @@ button.bg-light:focus {
   background-color: #343a40 !important;
 }
 
+.bg-dark2 {
+  background-color: #343a40 !important;
+}
+
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
+  background-color: #1d2124 !important;
+}
+
+a.bg-dark2:hover, a.bg-dark2:focus,
+button.bg-dark2:hover,
+button.bg-dark2:focus {
   background-color: #1d2124 !important;
 }
 

@@ -11,7 +11,8 @@
 .border-bottom,
 .darkgreen,
 .btn-black,
-.btn-purple {
+.btn-purple,
+.btn-green{
   transition:500ms ease;
   background:transparent;
 }
