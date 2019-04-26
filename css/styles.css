@@ -92,14 +92,14 @@
     background: transparent;
 }
 
-@media (pointer: coarse) and (hover: none) {
+/*@media (pointer: coarse) and (hover: none) {
 .jumbrotron {
     background: url('../images/HomePoster_01.png') black no-repeat center center scroll;
   }
 .jumbotron video {
     display: none;
   }
-}
+}*/
 
 .tk-circle {
 	position: relative;
