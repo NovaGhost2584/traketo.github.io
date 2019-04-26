@@ -94,7 +94,7 @@
 
 @media (pointer: coarse) and (hover: none) {
 .jumbrotron {
-    background: url('../images/HomePoster_01.jpg') black no-repeat center center scroll;
+    background: url('../images/HomePoster_01.png') black no-repeat center center scroll;
   }
 .jumbotron video {
     display: none;
