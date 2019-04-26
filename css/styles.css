@@ -67,10 +67,6 @@
 }
 }
 
-.simpleParallax {
-	overflow: visible !important;
-}
-
 .shadowed {
 	 -webkit-filter: drop-shadow(0px 0px 50px rgba(0,0,0,0.5));
  	 filter: drop-shadow(0px 0px 50px rgba(0,0,0,0.5));
@@ -98,7 +94,7 @@
 
 @media (pointer: coarse) and (hover: none) {
 .jumbrotron {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    background: url('/images/HomePoster_01.jpg') black no-repeat center center scroll;
   }
 .jumbotron video {
     display: none;

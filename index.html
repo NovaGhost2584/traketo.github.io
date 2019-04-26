@@ -31,7 +31,6 @@
 	<link href="css/aos.css" rel="stylesheet">
 	<link href="css/carousel.css" rel="stylesheet">
 	<script src="js/aos.js"></script>
-	<script src="js/simpleParallax.min.js"></script>
 	</head>
 
 	<body>
@@ -39,14 +38,14 @@
 		
 			
 		<!-- Video Background -->
-		<div class="jumbotron jumbotron-fluid vh-75">
-			<div class="overlay"></div>
-			<video playinline autoplay muted loop poster="">    
+		<div class="jumbotron jumbotron-fluid h-75">
+			<div class="overlay" style="height: 150%;"></div>
+			<video playinline autoplay muted loop poster="images/HomePoster_01.jpg" style="height: 1080px">    
 				<source src="https://s3.us-east-2.amazonaws.com/aws-codestar-us-east-2-774818991484/PulseHeroVid.mp4" data-src="https://s3.us-east-2.amazonaws.com/aws-codestar-us-east-2-774818991484/PulseHeroVid.mp4" type="video/mp4">
 			</video>
 
 			<div class="container position-relative" style="z-index: 9;">
-				<div class="d-flex h-100 text-center align-items-center title-text">
+				<div class="d-flex text-center align-items-center title-text">
 				  <div class="w-100">
 					<p class="display-1 font-weight-bold text-pulse text-left shadowed2">Immersive Solutions</p>
 					<p class="display-1 font-weight-bold text-white text-left shadowed2">For Enterprise</p>
@@ -95,7 +94,7 @@
 		<!-- Green Shapes -->
 		<div class="container position-relative mw-100">
 			<div class="row mw-100 greenshapes">
-				<img class="transition parallax-green shadowed" src="images/darkgreen.png" alt="darkgreenshape" />
+				<img class="transition shadowed" src="images/darkgreen.png" alt="darkgreenshape" />
 				<img class="position-relative lightgreen shadowed" src="images/lightgreen.png" alt="lightgreenshape" style="margin-top: -500px" />
 			</div>
 		</div>
