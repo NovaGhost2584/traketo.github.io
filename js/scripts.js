@@ -65,11 +65,21 @@ function WidthChange(mq) {
 		var images = document.querySelectorAll('.parallax-green');
 		new simpleParallax(images, {
 		scale: 1
-		}); 
+		}); 	
+		var images = document.querySelectorAll('.parallax-grey');
+		new simpleParallax(images, {
+		scale: 1
+		});
 	} else {			
 		var images = document.querySelectorAll('.parallax-green');
 		new simpleParallax(images, {
 		scale: 1.5,
+		delay: 0, 
+		orientation: 'down'
+		}); 			
+		var images = document.querySelectorAll('.parallax-grey');
+		new simpleParallax(images, {
+		scale: 1.75,
 		delay: 0, 
 		orientation: 'down'
 		}); 

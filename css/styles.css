@@ -9,12 +9,16 @@
 }
 
 .border-bottom,
-.darkgreen,
+.transition,
 .btn-black,
 .btn-purple,
 .btn-green{
   transition:500ms ease;
   background:transparent;
+}
+
+.border-bottom.scrolled {
+	border-bottom: 0px solid #fff !important;
 }
 
 .text-pulse {
@@ -196,23 +200,33 @@
   border-color: #000;
 }
 
-.greenshapes {
+.greenshapes,
+.mapfix {
 	z-index: 8;
 	position: relative;
+}
+
+.greenshapes,
+.mapfix {
 	top: -25vw;
 }
 
-.greenshapes-reset {
-	margin-bottom: -25vw;
+.map {
+	left: 20vw;
+}
+
+.mapfix {
+    margin-bottom: -25vw;
 }
 
 @media (min-width: 576px) {
 
-	.greenshapes {
+	.greenshapes,
+	.mapfix {
 		top: -30vw;
 	}
 
-	.greenshapes-reset {
+	.mapfix {
 		margin-bottom: -30vw;
 	}
 	
@@ -220,24 +234,47 @@
 
 @media (min-width: 768px) {
 
-	.greenshapes {
+	.greenshapes,
+	.mapfix {
 		top: -30vw;
 	}
 
-	.greenshapes-reset {
+	.mapfix {
 		margin-bottom: -30vw;
+	}
+
+	.map {
+		left: 10vw;
 	}
 	
 }
 
+@media (min-width: 992px) {
+	.map {
+		left: 5vw;
+	}
+}
+
 @media (min-width: 1200px) {
 
-	.greenshapes {
+	.greenshapes,
+	.mapfix {
 		top: -14vw;
 	}
 
-	.greenshapes-reset {
+	.mapfix {
 		margin-bottom: -14vw;
+	}
+
+	.map {
+		left: 3vw;
+	}
+	
+}
+
+@media (min-width: 1800px) {
+	.map {
+		left: 10vw;
 	}
 	
 }
@@ -279,4 +316,62 @@
 .parallax-window {
     min-height: 300px;
     background: transparent;
+}
+
+.darkgrey {	
+    top: -100px;
+    position: relative;
+}
+
+.footer-main {
+	background-color: #262626;
+	padding-top: 50px;
+}
+
+.social {
+	transform: scale(0.9);
+}
+
+.social:hover {
+	transform: scale(1.1) rotate(6deg);
+}
+
+.social-facebook {
+	content: url("../images/facebook-blk.png");
+}
+
+.social-facebook:hover {
+	content: url("../images/facebook-prpl.png");
+}
+
+.social-mail {
+	content: url("../images/mail-blk.png");
+}
+
+.social-mail:hover {
+	content: url("../images/mail-prpl.png");
+}
+
+.social-twitter {
+	content: url("../images/twitter-blk.png");
+}
+
+.social-twitter:hover {
+	content: url("../images/twitter-prpl.png");
+}
+
+.social-linkedin {
+	content: url("../images/linkedin-blk.png");
+}
+
+.social-linkedin:hover {
+	content: url("../images/linkedin-prpl.png");
+}
+
+.social-vimeo {
+	content: url("../images/vimeo-blk.png");
+}
+
+.social-vimeo:hover {
+	content: url("../images/vimeo-prpl.png");
 }
