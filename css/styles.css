@@ -12,21 +12,47 @@
 .transition,
 .btn-black,
 .btn-purple,
-.btn-green{
+.btn-green,
+.navbar-expand-lg .navbar-nav .nav-link {
   transition:500ms ease;
   background:transparent;
 }
 
+@media (min-width: 1025px) {
+
+	.navbar.scrolled {
+		padding: 0;
+	}
+}
+
+@media (min-width: 1280px) {
+	.navbar-expand-lg .navbar-nav .nav-link.scrolled {
+		font-size: 1vw;
+	}
+}
+
+.jumbotron.videoscrolled {
+	display: none;
+}
+
 .border-bottom.scrolled {
-	border-bottom: 0px solid #fff !important;
+	border-bottom: 0 !important;
 }
 
 .text-pulse {
 	color: #c1d82f;
 }
 
+.text-black {
+	color: #000;
+}
+
 .background-pulse {
 	background-color: #c1d82f;	
+}
+
+.background-white {
+	background-color: #FFF;	
 }
 
 .icon-scroll {
@@ -92,14 +118,16 @@
     background: transparent;
 }
 
-/*@media (pointer: coarse) and (hover: none) {
-.jumbrotron {
-    background: url('../images/HomePoster_01.png') black no-repeat center center scroll;
-  }
-.jumbotron video {
-    display: none;
-  }
-}*/
+.parallax-window-2 {
+    min-height: 75vh;
+    background: transparent;
+}
+
+.parallax-window-3 {
+    min-height: 30vh;
+    background: transparent;
+}
+
 
 .tk-circle {
 	position: relative;
@@ -108,6 +136,24 @@
 	width: 250px;
 	height: 250px;
 	margin: 0 auto;
+	
+}
+
+.team-circle {
+	position: relative;
+	background-color: #fff;
+	border-radius: 150px;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	overflow: hidden;
+	border: 5px solid #FFF;
+	
+}
+
+.circle-img {
+	width: 125%; 
+	margin-left:-30px;
 }
 
 .content-title {
@@ -196,6 +242,13 @@
   border-color: #000;
 }
 
+.btn-purple:disabled,
+.btn-black:disabled {
+	color: #999;
+	background-color: #555;
+	border-color: #555;
+}
+
 .greenshapes,
 .mapfix {
 	z-index: 8;
@@ -204,7 +257,7 @@
 
 .greenshapes,
 .mapfix {
-	top: -25vw;
+	top: -10vw;
 }
 
 .map {
@@ -305,8 +358,8 @@
 	  flex-flow: row wrap;
 	}
 	
-	.swapitem:nth-of-type(1) { order: 1}
-	.swapitem:nth-of-type(2) { order: 2}
+	.swapitem:nth-of-type(1) { order: 2}
+	.swapitem:nth-of-type(2) { order: 1}
 }
 
 .parallax-window {
@@ -314,9 +367,18 @@
     background: transparent;
 }
 
-.darkgrey {	
-    top: -100px;
-    position: relative;
+.greyshapes {	
+	background-image: url("../images/grey-tiled.png");
+	background-repeat: repeat-x;
+	height: 111px;
+}
+
+.green {	
+	background-image: url("../images/green.png");
+	background-repeat: repeat-x;
+	background-size: cover;
+	background-position: center;
+	height: 516px;
 }
 
 .footer-main {
@@ -370,4 +432,138 @@
 
 .social-vimeo:hover {
 	content: url("../images/vimeo-prpl.png");
+}
+
+.pushdown {
+	margin-top: 35rem;
+}
+
+@media (min-width: 576px) {
+	.pushdown {
+		margin-top: 60rem;
+	}		
+}
+
+@media (min-width: 1024px) {
+	.pushdown {
+		margin-top: 55rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.pushdown {
+		margin-top: 45rem;
+	}
+}
+
+@media (min-width: 1440px) {
+	.pushdown {
+		margin-top: 60rem;
+	}
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #c1d82f;
+}
+
+.portfolio:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-text {
+  color: #000;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+
+.blog-card-img {
+	height: 20rem;
+	object-fit: cover;
+}
+
+.service-card-img {
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-color: #000;
+}
+
+.service-img-vr {
+    background-image: url("/images/vive-hs.jpg");
+}
+
+.service-img-ar {
+    background-image: url("/images/hololens-hs.jpg");
+}
+
+.service-img-consulting {
+    background-image: url("/images/Service-consult.jpg");
+}
+
+.service-img-enterprise {
+    background-image: url("/images/Service-Enterprise.jpg");
+}
+
+.service-img-360 {
+    background-image: url("/images/360.jpg");
+}
+
+.service-img-web {
+    background-image: url("/images/portfolio/BCBS_2.jpg");
+}
+
+.card-service:hover .card-service-overlay {
+	opacity: 1;
+}
+
+.card-service-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+  transition: .5s ease;
+  border-radius: 1.25rem;
+  background-color: #111;
+}
+
+.service-btn {
+	z-index: 999; 
+	border-radius: 0 0 1.25rem 1.25rem !important;
+	padding: 1rem !important;
+}
+
+.z999 {
+	z-index: 999 !important;
+}
+
+.blog-layout {
+	float: left;
+    display: inline;
+    position: relative;
+}
+
+.sidebar-layout {
+	float: right;
+    display: inline;
+    position: relative;
 }

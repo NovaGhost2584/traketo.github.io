@@ -2,8 +2,16 @@ jQuery(document).ready(function() {
 	// on scroll effects
 	$(window).scroll(function(){
 		$(".navscroll").toggleClass('scrolled', $(this).scrollTop() > 100);
+		$(".videoscroll").toggleClass('videoscrolled', $(this).scrollTop() > 1000);
 	});
-
+	
+	
+		
+	if (window.innerWidth > 758) {
+		$(".sidebar").toggleClass('show');
+    };
+	
+	
 	// standard parallax
 	$('.parallax-window').parallax({imageSrc: 'images/Parallax-Purple.jpg'
     });
@@ -27,12 +35,13 @@ jQuery(document).ready(function() {
 	            // append slides to end
 	            if (e.direction=="left") {
 	                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-	            }
-	            else {
+	            } else {
 	                $('.carousel-item').eq(0).appendTo('.carousel-inner');
 	            }
 	        }
 	    }
+		
+			
 	});
 	
 });
